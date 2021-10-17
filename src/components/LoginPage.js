@@ -3,8 +3,8 @@ import axios from "axios"
 import Notification from "./Notification.js"
 
 const LoginPage =(props) => {
-    const [userName, setUserName] = useState("kevinryan");
-    const [password, setPassword] = useState("kev02937@");
+    const [userName, setUserName] = useState("");
+    const [password, setPassword] = useState("");
     const [errorMessage, setErrorMessage] = useState([null,{color:"red"}])
 
     const handleClickLogin = (e) => {
