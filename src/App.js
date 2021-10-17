@@ -1,23 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import React, {useState} from "react"
+import LoginPage from "./components/LoginPage.js"
+import Selection from "./components/Selection.js"
+import Head from "./components/Head.js"
+//import Head from "./components/Header.js"
 
 function App() {
+const [logedIn, setLogedIn] = useState(false)
+//setLogedIn (false)
+const [user,setUser] = useState()
+
+const handleLoginSub = () => {
+
+}
+
+
+
+
+//{(!logedIn)? < LoginPage   /> :  < Selection />   }
+
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+            
+      <Head className="Logo"/>
+      {(!logedIn)
+        ? < LoginPage 
+              isLogedIn ={(e)=>{setLogedIn(e)}} 
+              getUserInfo={(user)=>{setUser(user)}}/> 
+
+        :  < Selection  user={user} />   }
     </div>
   );
 }

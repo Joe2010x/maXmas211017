@@ -1,13 +1,292 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
-    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+* {
+    margin: 0;
+    font-family: "Quicksand";
+    color: #333;
+  }
+  .navbar {
+    padding: 20px;
+    display: flex;
+    align-items: center;
+    max-width: 600px;
+    margin: 0 auto;
+    border-bottom: 1px solid #f2f2f2;
+  }
+  .navbar h1 {
+    color: #f1356d;
+  }
+
+  .navbarImage {
+      height: 30px;
+  }
+
+  .selections {
+    margin:50px;
+  }
+
+/* create new blog form */
+.login {
+    max-width: 400px;
+    margin: 0 auto;
+    text-align: center;
+  }
+  .login label {
+    text-align: left;
+    display: block;
+  }
+  .login h2 {
+    font-size: 20px;
+    color: #f1356d;
+    margin-bottom: 30px;
+  }
+  .login input, .login textarea, .login select {
+    width: 100%;
+    padding: 6px 10px;
+    margin: 10px 0;
+    border: 1px solid #ddd;
+    box-sizing: border-box;
+    display: block;
+  }
+  .login button {
+    background: #f1356d;
+    color: #fff;
+    border: 0;
+    padding: 8px;
+    border-radius: 8px;
+    cursor: pointer;
+  }
+
+  /* Error Notification */
+
+  .error {
+    color: red;
+    background: lightgrey;
+    font-size: 20px;
+    border-style: solid;
+    border-radius: 5px;
+    padding: 10px;
+    margin-bottom: 10px;
+  }
+
+  /* Child cart Display page */
+  .childDisplay {
+    display:flex; 
+    margin:20px;
+    /* background-color: #FDFBDC; */
+  }
+
+  .childDisplay .childIcon {
+    width: 80px;
+    height: 60px;
+    align-content: center;
+    text-align: center;
+    margin-right:20px;
+    border-radius: 50%;
+    background-color: #FDFBDC;
+    border-style:groove;
+
+  }
+
+  .childDisplayImage {
+    max-width :40px;
+    max-height :40px;
+  }
+
+  /* Display Product  */
+
+  .product {
+    text-align: center;
+    width: 80px;
+    height:45px;
+    margin: 5px 10px;
+    padding-left: 10px;
+    display: flex;
+    box-shadow: 5px 5px 5px gray;
+    border-radius: 15%;
+    border-style: outset;
+    
+  }
+  .productListImage {
+    margin:5px;
+    max-width: 30px;
+  }
+
+  .product .quantity {
+    /* margin-top: 15px; */
+    margin: 20px 0px 0px 5px; 
+  }
+
+  .productList {
+    display:flex;
+  }
+
+  /* infoBox */
+  .infoBox, .overlay{
+    width:100vw;
+    height: 100vh;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    position:fixed;
+
+  }
+
+  .overlay {
+    background:rgba(49,49,49,0.8)
+  }
+  
+  .infoBox-content {
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    line-height: 1.4;
+    background: white;
+    padding: 14px 28px;
+    border-radius: 3px;
+    max-width: 800px;
+    min-width: 300px;
+  }
+
+  .productImage {
+    max-width: 150px;
+    height: auto;
+    text-align: center;
+  }
+
+  .infoBox-content h3 {
+    text-align: left;
+  }
+  .infoBox-content p {
+    text-align: left;
+  }
+
+  .close-infoBox {
+    padding:5px 7px;
+   /* text-align: right; */
+    position:absolute;
+    /* right:0; */
+
+      position: absolute;
+      background: red;
+      color: white;
+      top: 10px;
+      right: 10px;
+  
+  }
+
+.infoBoxLine {
+  width:100%; 
+  size:3; 
+  color:black;
+  margin:10px 0px 10px 0px;
+}
+.approvalBox {
+  text-align: center;
 }
 
-code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
-    monospace;
+.btn-discard {
+  color:red;
+  margin:5px;
+  width:80px;
+}
+.btn-approval {
+  color:green;
+  margin:5px;
+
+  width:80px;
+}
+
+.input-quantity {
+  text-align: center;
+  margin:0px 5px 0px 5px;
+  max-width: 80px;
+}
+
+.btn-increase {
+  border-radius: 50%;
+  background-color:lightgreen;
+  color:white;
+  font-size: large;
+  border: none;
+  border-color: black;
+  margin-left:10px
+}
+
+.btn-decrease {
+  border-radius: 50%;
+  background-color:lightcoral;
+  color:white;
+  font-size: large;
+  border: none;
+  border-color: black;
+  margin-right:10px;
+}
+.btn-containter {
+  width :100%;
+  height:100%;
+  text-align: center;
+
+}
+.btn-cart {
+  
+  width:68px;
+  height:46px;
+  border-radius: 35%;
+  margin:8px 8px 8px 8px;
+  text-align: center;
+  display: inline-block;
+}
+.btn-cart-img {
+  padding-top: 2px;
+  max-width: 68px;
+  max-height:28px;
+}
+.btn-D-all {
+  
+  width:98px;
+  height:26px;
+  margin:0px 8px 8px 8px;;
+  display: inline-block;
+  color:darkred;
+}
+.btn-A-all {
+  width:98px;
+  height:26px;
+  margin:0px 8px 8px 8px;;
+  display: inline-block;
+  color:darkgreen;
+}
+
+.tableOutput {
+  display:flex;
+  
+}
+.quantity {
+  width:100px;
+  text-align: center;
+}
+
+.productName {
+  width:500px;
+}
+.unitPrice {
+  width:100px;
+  text-align: right;
+}
+
+.sum{
+  width:100px;
+  text-align: right;
+}
+.greeting {
+  margin: 10px 0px 10px 10px;
+}
+
+.finalPrice {
+  margin:20px 0px 10px 20px;
+}
+.btn-pay {
+  margin:30px ;
+  width: 100px;
 }
