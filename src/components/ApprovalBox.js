@@ -1,6 +1,7 @@
 import React,{useState} from "react"
 import Notification from "./Notification.js"
 
+
 const ApprovalBox =({quan,upDateQuantity}) => {
     const [quantity, setQuantity] =useState(quan)
     const [errorMessage,setErrorMessage] =useState ([null,{}])
